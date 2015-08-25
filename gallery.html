@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+  <div id="main-navbar"></div>
+  <div id="thumbnails-container">
+  </div>
+
+  <!-- Template for a single movie card -->
+  <script id="music-template" type="x-tmpl-mustache">
+    <div class="movie-thumbnail" style="background-image: url({{ thumbnail }})">
+      <div class="mask">
+        <div class="name">{{ name }}</div>
+        <div class="description">{{ description }}</div>
+        <audio src="{{ sampletrack }}" controls></audio>
+        <img class="close-btn" src="close.png">
+      </div>
+    </div>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
